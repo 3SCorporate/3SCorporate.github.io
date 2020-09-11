@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clone LogComex</title>
+
+    <style>
+        body {
+            background-color: rgb(233, 233, 233);
+        }
+        
+        nav ul ul {
+            display: none;
+        }
+        
+        nav ul li:hover>ul {
+            display: block;
+        }
+        
+        nav {
+            margin: 0 0;
+            top: 0;
+            width: 100%;
+        }
+        
+        nav ul {
+            padding: 0 20px;
+            border-radius: 10px;
+            list-style: none;
+            position: relative;
+            font-family: Arial, Helvetica, sans-serif;
+            font-weight: bold;
+            display: inline-table;
+            color: white;
+        }
+        
+        nav ul:after {
+            content: "";
+            clear: both;
+            display: block;
+        }
+        
+        nav ul li {
+            float: left;
+            padding: 15px 20px;
+        }
+        
+        nav ul li:hover {
+            background-image: linear-gradient(to top, #ffffff, #ffffff);
+            color: #4b545f;
+            border-radius: 8px;
+        }
+        
+        nav ul li:hover a {
+            color: #fff;
+        }
+        
+        nav ul li a {
+            display: block;
+            color: #ffffff;
+            text-decoration: none;
+        }
+        
+        nav ul ul {
+            background: #7a15ff;
+            border-radius: 8px;
+            padding: 0;
+            position: absolute;
+            top: 100%;
+        }
+        
+        nav ul ul li {
+            float: none;
+            border-top: 1px solid #ffffff;
+            border-bottom: 1px solid #ffffff;
+            position: relative;
+        }
+        
+        nav ul ul li a {
+            color: #fff;
+        }
+        
+        nav ul ul li a:hover {
+            background: #ffffff;
+            border-radius: 8px;
+            color: #7a15ff;
+        }
+        
+        nav ul ul ul {
+            position: absolute;
+            left: 100%;
+            top: 0;
+        }
+        
+        header {
+            background: rgb(131, 0, 218);
+            box-shadow: 10px 10px 22px -5px rgba(0, 0, 0, 0.75);
+            position: fixed;
+            width: 100%;
+            height: 80px;
+            margin-left: 0;
+            left: 0px;
+            top: 0px;
+        }
+        
+        #logo {
+            width: 160px;
+            margin-left: 30px;
+        }
+        
+        .bi {
+            margin-top: 0px;
+        }
+        
+        #label {
+            right: 20px;
+            top: 20px;
+            display: inline-flexbox;
+            align-items: center;
+            position: absolute;
+            color: white;
+            font-family: arial;
+            font-weight: bold;
+            position: fixed;
+        }
+        
+        #imguser {
+            width: 29px;
+            border-radius: 50%;
+        }
+        
+        #clone {
+            color: #bc89ff;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <label for=""><img id="logo" src="https://sistema.logcomex.io/img/logo_LOGCOMEX_02.30e32698.png" alt=""> <span id="clone">Clone</span> </label>
+
+            <ul>
+                <li>Big Data ⇩
+                    <ul>
+                        <li><a href="https://app.powerbi.com/reportEmbed?reportId=d0c3450c-d3fa-48f7-8bf7-206c32edf494&autoAuth=true&pageName=ReportSection8880c47a0bf0c93dbf87" target="iframe1">Detalhado</a></li>
+                        <li><a href="https://app.powerbi.com/reportEmbed?reportId=d0c3450c-d3fa-48f7-8bf7-206c32edf494&autoAuth=true&pageName=ReportSection263289ae9da6d583c7d3" target="iframe1">Gráficos</a></li>
+                    </ul>
+                </li>
+                <li>Tracking ⇩
+                    <ul>
+                        <li>Tracking</li>
+                        <li>Transit</li>
+                    </ul>
+                </li>
+                <li><label>Search</label></li>
+            </ul>
+
+
+        </nav>
+
+    </header>
+
+    <section id="bi1">
+        <iframe name="iframe1" id="iframe1" class="bi" width="100%" height="1722px" src="https://app.powerbi.com/reportEmbed?reportId=d0c3450c-d3fa-48f7-8bf7-206c32edf494&autoAuth=true" frameborder="0" allowFullScreen="true"></iframe>
+    </section>
+    <label id="label">
+        Olá Gabriel Spohr
+        <img id="imguser" src="https://previews.123rf.com/images/djvstock/djvstock1702/djvstock170212729/72505945-ilustra%C3%A7%C3%A3o-vetorial-homem-icon-cabe%C3%A7a-sem-rosto-design-gr%C3%A1fico.jpg" alt="">
+    </label>
+    <script>
+        function show(pageName) {
+            var newURL = baseURL + "&pagelName=" + pageName;
+            var report = document.getElementById("iframe1");
+            report.src = newUrl;
+        }
+        }
+    </script>
+    <!--div class="container">
+        <div class="filtros">
+            <h3>Filtros</h3>
+            <fieldset>
+                <div class="select-block">
+                    <label for="subject">Periodo</label>
+                    <select name="subject" id="subject" required>
+                        <option value="">Ultimos 3 meses</option>
+                        <option value="1">Ultimos 6 meses</option>
+                        <option value="2">082020</option>
+                        <option value="3">072020</option>
+                        <option value="4">Educação física</option>
+                        <option value="5">Física</option>
+                        <option value="6">Geografia</option>
+                        <option value="7">História</option>
+                        <option value="8">Matemática</option>
+                        <option value="9">Português</option>
+                        <option value="10">Química</option>
+                    </select>
+
+                </div>
+            </fieldset>
+        </div>
+    </div>
+    <div>
+        <img src="" alt="">
+    </div>
+    <div>
+        <input type="email">
+    </div>
+    <div>
+        <input type="password">
+    </div>
+    <div><a href="">
+        Entrar
+    </a>
+    </div-->
+</body>
+
+</html>
